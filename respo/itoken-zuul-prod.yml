@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: itoken-zuul
+  boot:
+    admin:
+      client:
+        url: http://123.207.154.78:8084
+  zipkin:
+    base-url: http://123.207.154.78:9411
+
+server:
+  port: 8769
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://123.207.154.78:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
